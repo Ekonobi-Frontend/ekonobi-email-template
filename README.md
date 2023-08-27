@@ -13,28 +13,27 @@ This repository contains a set of email templates for the Ekonobi platform. Thes
 
 1. **Hoş Geldin (Welcome)**: This template is used to welcome new users to the Ekonobi platform.
 
+   ![Welcome Template](screenshots/welcome.png)
+
 2. **Yeni Cihaz Aktivasyonu (New Device Activation)**: This template is used to notify users when a new device is activated on their account.
+
+   ![New Device Activation Template](screenshots/new-device-activation.png)
 
 3. **Şifre Güncellendi (Password Updated)**: This template is used to inform users when their password has been updated.
 
+   ![Password Updated Template](screenshots/your-password-has-been-updated.png)
+
 4. **Çekme Doğrulama Kodu (Withdrawal Verification Code)**: This template is used for sending withdrawal verification codes to users.
+
+   ![Withdrawal Verification Code Template](screenshots/withdrawal-verification-code.png)
 
 5. **Çekme (Withdrawal)**: This template is used for withdrawal-related communications.
 
+   ![Withdrawal Template](screenshots/do-not-pull.png)
+
 6. **Yatırma (Deposit)**: This template is used for deposit-related communications.
 
-## Images
-
-Images used in these email templates are located in the `screenshots/` directory:
-
-- `welcome.png`: Image for the "Hoş Geldin" template.
-- `new-device-activation.png`: Image for the "Yeni Cihaz Aktivasyonu" template.
-- `your-password-has-been-updated.png`: Image for the "Şifre Güncellendi" template.
-- `withdrawal-verification-code.png`: Image for the "Çekme Doğrulama Kodu" template.
-- `do-not-pull.png`: Image for the "Çekme" template.
-- `deposit.png`: Image for the "Yatırma" template.
-
-Make sure these images are accessible when using the templates.
+   ![Deposit Template](screenshots/deposit.png)
 
 ## Usage
 
