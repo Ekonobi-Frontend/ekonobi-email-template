@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta name="x-apple-disable-message-reformatting" />
@@ -12,7 +12,10 @@
       </style>
    </head>
    <body style="font-family: 'IBM Plex Sans', Arial, sans-serif;">
-      <div dir="ltr" style="margin:0px;width:100%;background-color:#f3f2f0;padding:20px 0;">
+
+   <h1 th:text="${message}"></h1>
+
+   <div dir="ltr" style="margin:0px;width:100%;background-color:#f3f2f0;padding:20px 0;">
          <table role="presentation" valign="top" border="0" cellspacing="0" cellpadding="0" width="600" align="center" style="margin-left:auto;margin-right:auto;margin-top:0px;margin-bottom:0px;width:600px;max-width:600px;background-color:#FFFFFF;padding:0px">
             <tbody>
                <tr>
@@ -31,7 +34,7 @@
                                                     <span style="color: #2152FA; font-size: 12px; font-weight: 400; font-family: 'IBM Plex Sans', Arial, sans-serif; letter-spacing: -0.24px; line-height: 20px;">Oltalama Kodu</span>
                                                 </div>
                                                 <div style="background-color: #C1CFFF; width: 100px; text-align: center;">
-                                                    <span style="color: #2152FA; font-size: 14px; font-weight: 600; font-family: 'IBM Plex Sans', Arial, sans-serif; letter-spacing: 1.4px; line-height: 22.5px;">1*34*6</span>
+                                                    <span style="color: #2152FA; font-size: 14px; font-weight: 600; font-family: 'IBM Plex Sans', Arial, sans-serif; letter-spacing: 1.4px; line-height: 22.5px;">[[${phishingCode}]]</span>
                                                 </div>
                                             </div>
                                           </td>
@@ -49,7 +52,7 @@
                      <table role="presentation" valign="top" border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:100%">
                         <tbody>
                            <tr>
-                              <td align="left" valign="middle"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#2152FA;font-size: 18px;font-weight: 500;">Tether (USDT) yatırma işlemi tamamlandı</span></td>
+                              <td align="left" valign="middle"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#2152FA;font-size: 18px;font-weight: 500;">[[${assetName}]] ([[${assetCode}]]) yatırma işlemi tamamlandı</span></td>
                            </tr>
                         </tbody>
                      </table>
@@ -60,10 +63,10 @@
                      <table role="presentation" valign="top" border="0" cellspacing="0" cellpadding="0" width="100%" style="min-width:100%">
                         <tbody>
                            <tr>
-                              <td align="left" valign="top" style="padding-bottom: 20px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 16px;font-weight: 500;">Sevgili Ece,</span></td>
+                              <td align="left" valign="top" style="padding-bottom: 20px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 16px;font-weight: 500;">Sevgili [[${customerName}]],</span></td>
                            </tr>
                            <tr>
-                              <td align="left" valign="top"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 16px;font-weight: 500;line-height: 24px;">Ekonobi cüzdanına Tether (USDT) girişi oldu ve artık kullanıma hazır. Bu transferi <strong>“Cüzdan > Transfer Geçmişi”</strong> adımlarını takip ederek kontrol edebilirsin.</span></td>
+                              <td align="left" valign="top"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 16px;font-weight: 500;line-height: 24px;">Ekonobi cüzdanına [[${assetName}]] ([[${assetCode}]]) girişi oldu ve artık kullanıma hazır. Bu transferi <strong>“Cüzdan > Transfer Geçmişi”</strong> adımlarını takip ederek kontrol edebilirsin.</span></td>
                            </tr>
                         </tbody>
                      </table>
@@ -82,23 +85,23 @@
                                     <tbody>
                                        <tr>
                                           <td align="left" valign="top" style="padding-bottom: 10px; width: 106px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 12px;font-weight: 400;line-height: 24px;">Giden Para Birimi:</span></td>
-                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">Tether (USDT)</span></td>
+                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">[[${assetName}]] ([[${assetCode}]])</span></td>
                                        </tr>
                                        <tr>
                                           <td align="left" valign="top" style="padding-bottom: 10px; width: 106px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 12px;font-weight: 400;line-height: 24px;">Transfer Miktarı:</span></td>
-                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">15.293,47390000 USDT</span></td>
+                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">[[${amount}]] [[${assetCode}]]</span></td>
                                        </tr>
                                        <tr>
                                           <td align="left" valign="top" style="padding-bottom: 10px; width: 106px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 12px;font-weight: 400;line-height: 24px;">Alıcı Adresi:</span></td>
-                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">TBUYxngBTAe45NusZqn2Q79443aqCH14GC</span></td>
+                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">[[${recipientAddress}]]</span></td>
                                        </tr>
                                        <tr>
                                           <td align="left" valign="top" style="padding-bottom: 10px; width: 106px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 12px;font-weight: 400;line-height: 24px;">Gönderim Etiketi:</span></td>
-                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">-</span></td>
+                                          <td align="left" valign="top" style="padding-bottom: 10px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">[[${destinationTag}]]</span></td>
                                        </tr>
                                        <tr>
                                         <td align="left" valign="top" style="width: 106px;"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 12px;font-weight: 400;line-height: 24px;">İşlem Tarihi:</span></td>
-                                        <td align="left" valign="top"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">13.06.2023 16:37</span></td>
+                                        <td align="left" valign="top"><span style="font-family: 'IBM Plex Sans', Arial, sans-serif;color:#0A1127;font-size: 14px;font-weight: 500;line-height: 24px;">[[${createdAt}]]</span></td>
                                      </tr>
                                     </tbody>
                                  </table>
